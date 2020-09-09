@@ -32,5 +32,7 @@ const api = new OpenAI();
 })();
 ```
 
+## Example
+
 For a more complete example, see [here](https://github.com/shawwn/my-writer/blob/master/index.js).
 
