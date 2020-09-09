@@ -31,3 +31,6 @@ const api = new OpenAI();
   console.log(gptResponse.data);
 })();
 ```
+
+For a more complete example, see [here](https://github.com/shawwn/my-writer/blob/master/index.js).
+
