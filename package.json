@@ -1,10 +1,11 @@
 {
   "name": "tensorfork-openai-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny client module for the tensorfork OpenAI API wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --use_strict"
+    "test": "mocha --use_strict",
+    "build": "browserify index.js > browser.js"
   },
   "keywords": [
     "openai",
