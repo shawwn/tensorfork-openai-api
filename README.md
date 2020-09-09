@@ -18,9 +18,9 @@ const api = new OpenAI();
 (async () => {
   const gptResponse = await api.complete({
     engine: 'davinci',
-    prompt: 'this is a test',
-    maxTokens: 5,
-    temperature: 0.9,
+    prompt: 'Hello, my name is',
+    maxTokens: 32,
+    temperature: 0.6,
     frequency_penalty: 0.85,
     topP: 1,
     n: 1,
