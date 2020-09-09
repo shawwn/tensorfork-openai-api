@@ -1,7 +1,7 @@
 {
-  "name": "openai-api",
-  "version": "1.0.9",
-  "description": "A tiny client module for the openAI API",
+  "name": "tensorfork-openai-api",
+  "version": "0.0.1",
+  "description": "A tiny client module for the tensorfork OpenAI API wrapper",
   "main": "index.js",
   "scripts": {
     "test": "mocha --use_strict"
@@ -16,10 +16,13 @@
     "node"
   ],
   "author": "Nikita Jerschow",
+  "contributors": [
+    "Shawn Presser"
+  ],
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Njerschow/openai-api"
+    "url": "https://github.com/shawwn/openai-api"
   },
   "dependencies": {
     "axios": "^0.19.2"
