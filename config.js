@@ -1,17 +1,21 @@
+const DEFAULT_ENDPOINT = 'https://api.openai.com';
 const DEFAULT_ENGINE = 'davinci';
 const ENGINE_LIST = ['ada', 'babbage', 'curie', 'davinci'];
 
 module.exports = {
-    completionURL: (engine) => {
-        if (!engine) {
-            engine = DEFAULT_ENGINE;
+    listURL: (endpoint) => {
+        if (!endpoint) {
+            endpoint = DEFAULT_ENDPOINT;
         }
-        return `https://api.openai.com/v1/engines/${engine}/completions`;
+        return `${endpoint}/v1/engines`;
     },
-    searchURL: (engine) => {
+    completionURL: (engine, endpoint) => {
         if (!engine) {
             engine = DEFAULT_ENGINE;
         }
-        return `https://api.openai.com/v1/engines/${engine}/search`;
-    }
+        if (!endpoint) {
+            endpoint = DEFAULT_ENDPOINT;
+        }
+        return `${endpoint}/v1/engines/${engine}/completions`;
+    },
 }
