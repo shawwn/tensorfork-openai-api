@@ -1,6 +1,6 @@
 {
   "name": "tensorfork-openai-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tiny client module for the Tensorfork OpenAI API wrapper",
   "main": "index.js",
   "sideEffects": false,
