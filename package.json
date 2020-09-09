@@ -1,11 +1,12 @@
 {
   "name": "tensorfork-openai-api",
-  "version": "0.0.2",
-  "description": "A tiny client module for the tensorfork OpenAI API wrapper",
+  "version": "0.0.3",
+  "description": "A tiny client module for the Tensorfork OpenAI API wrapper",
   "main": "index.js",
+  "sideEffects": false,
   "scripts": {
     "test": "mocha --use_strict",
-    "build": "browserify index.js > browser.js"
+    "build": "webpack --entry=./index.js --output=./browser.js --mode=production"
   },
   "keywords": [
     "openai",
@@ -29,6 +30,8 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
-    "mocha": "^8.1.1"
+    "mocha": "^8.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

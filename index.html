@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <!--<script src="https://unpkg.com/tensorfork-openai-api@0.0.2/browser.js"></script>-->
+    <script src="./browser.js"></script>
+    <script>
+      window.api = new OpenAI();
+    </script>
+  </head>
+  <body>
+    <pre style="max-width: 100vw; word-wrap: break-word; white-space: pre-wrap;" id="output">Hello, my name is</pre>
+    <script>
+fn = (async () => {
+  const el = document.getElementById('output');
+  const gptResponse = await window.api.complete({
+    engine: 'davinci',
+    prompt: el.innerHTML,
+    maxTokens: 32,
+    temperature: 0.6,
+    frequency_penalty: 0.85,
+    topP: 1,
+    n: 1,
+    stream: false,
+    stop: ['\n', "testing"],
+    echo: true,
+  });
+  
+  const text = gptResponse.data.choices[0].text;
+  console.log(text);
+  el.innerHTML = text;
+  fn();
+});
+
+fn();
+    </script>
+  </body>
+</html>

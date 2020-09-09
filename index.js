@@ -6,7 +6,7 @@ const axios = require('axios');
 const OPENAI_ENDPOINT = "https://api.openai.com";
 const TENSORFORK_ENDPOINT = "http://test.tensorfork.com:9000"
 
-class OpenAI {
+global.OpenAI = class OpenAI {
     constructor(api_key, endpoint) {
         this.api_key = api_key || "stub";
         //this.endpoint = endpoint || OPENAI_ENDPOINT;
