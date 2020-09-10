@@ -10,9 +10,11 @@
     <pre style="max-width: 100vw; word-wrap: break-word; white-space: pre-wrap;" id="output">Hello, my name is</pre>
     <script>
 fn = (async () => {
+  const engine = window.engine || (await window.api.list_engines()).data.data[0].id;
+  window.engine = engine;
   const el = document.getElementById('output');
   const gptResponse = await window.api.complete({
-    engine: 'davinci',
+    engine: engine,
     prompt: el.innerHTML,
     maxTokens: 32,
     temperature: 0.6,
